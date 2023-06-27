@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT-E</title>
+    <style>
+        body {
+            background: #e0e5ec;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .frame {
+            width: 90%;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        button {
+            margin: 20px;
+        }
+
+        .custom-btn {
+            width: 130px;
+            height: 40px;
+            color: #fff;
+            border-radius: 5px;
+            padding: 10px 25px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+                7px 7px 20px 0px rgba(0, 0, 0, .1),
+                4px 4px 5px 0px rgba(0, 0, 0, .1);
+            outline: none;
+        }
+
+        .btn-16 {
+            border: none;
+            color: #000;
+        }
+
+        .btn-16:after {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 100%;
+            top: 0;
+            left: 0;
+            direction: rtl;
+            z-index: -1;
+            box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+            transition: all 0.3s ease;
+        }
+
+        .btn-16:hover {
+            color: #000;
+        }
+
+        .btn-16:hover:after {
+            left: auto;
+            right: 0;
+            width: 100%;
+        }
+
+        .btn-16:active {
+            top: 2px;
+        }
+
+        input.custom-input {
+            width: 300px;
+            height: 40px;
+            color: #000;
+            border-radius: 5px;
+            padding: 10px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+            background: transparent;
+            box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+                7px 7px 20px 0px rgba(0, 0, 0, .1),
+                 4px 4px 5px 0px rgba(0, 0, 0, .1);
+            outline: none;
+            border: none;
+        }
+
+        .custom-input:focus {
+            box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+                7px 7px 20px 0px rgba(0, 0, 0, .1),
+                4px 4px 5px 0px rgba(0, 0, 0, .1),
+                0 0 5px 0px #aaa;
+        }
+
+        .custom-input::placeholder {
+            color: #aaa;
+        }
+
+        .custom-input:hover {
+            box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+                7px 7px 20px 0px rgba(0, 0, 0, .1),
+                4px 4px 5px 0px rgba(0, 0, 0, .1);
+        }
+
+        /*footer */
+        .custom-footer {
+            background-color: #f0f0f0;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .custom-footer p {
+            margin: 0;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .custom-footer .author {
+            font-weight: bold;
+        }
+
+        .custom-footer .tutor {
+            font-style: italic;
+        }
+
+        .custom-footer p a {
+            color: #888;
+            text-decoration: none;
+        }
+
+        .custom-footer p a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="/get" method="post">
+        <input type="text" name="prompt" class="custom-input" placeholder="Enter your prompt">
+        <div class="frame">
+            <button type="submit" class="custom-btn btn-16">Generate</button>
+        </div>
+    </form>
+
+    <footer class="custom-footer">
+        <div class="frame form">
+            <p>Designed and developed by <span class="author">Ezan Nebija</span><br> Student at Jcoders Academy <br> Under the guidance of <span class="tutor">Mirjeta Kastrati</span>.</p>
+        </div>
+    </footer>
+</body>
+</html>
